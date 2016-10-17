@@ -12,9 +12,9 @@ window.all = document.querySelectorAll.bind(document)
 // Better logs: log()
 window.log = console.log.bind(console)
 
-// Better object creation: extend(original.prototype) and clone({}, original)
-window.extend = Object.create.bind(Object)
-window.clone = Object.assign.bind(Object)
+// Better object cloning: clone({}, original)
+window.clone = function(object) {return Object.assign({}, object);}
+Object.prototype.keys = function() {return Object.keys(this)}
 
 // Better JSON: toJSON() fromJSON()
 window.toJSON = JSON.stringify.bind(JSON)
