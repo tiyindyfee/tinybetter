@@ -14,7 +14,7 @@ window.log = console.log.bind(console)
 
 // Better object cloning: clone({}, original)
 window.clone = function(object) {return Object.assign({}, object);}
-Object.prototype.keys = function() {return Object.keys(this)}
+//Object.prototype.keys = function() {return Object.keys(this)}
 
 // Better JSON: toJSON() fromJSON()
 window.toJSON = JSON.stringify.bind(JSON)
